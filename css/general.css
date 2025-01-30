@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Instrument Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/***********************/
+/*------- Header -------/
+/***********************/
+
+header {
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #eee; */
+  padding: 0 2.5rem;
+  position: absolute;
+  z-index: 100;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  padding: 0.1rem 0;
+  background: #444;
+  color: #eee;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(237, 166, 50, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+  text-decoration: none;
+  cursor: pointer;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.logo:hover {
+  color: #444;
+  font-weight: 600;
+}
+
+.navbar {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+  color: #eee;
+  font-size: 1.4rem;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: #bbb;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.2rem;
+  width: 4.2rem;
+  color: #bbb;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+.hero-section {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/gallery/angkor/angkor-wat-cambodia.jpg");
+  background-size: cover;
+  position: relative;
+
+  background-attachment: fixed;
+  scroll-snap-align: start;
+}
+
+.welcome-text {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  );
+  max-width: 750px;
+  height: 300px;
+  padding: 1.2rem 1.8rem;
+
+  position: absolute;
+  top: 9.5rem;
+  left: 2.5rem;
+}
+
+.welcome-text .button-welcome,
+.welcome-text p {
+  color: white;
+  flex-wrap: nowrap;
+  margin-bottom: 1.2rem;
+}
+
+.welcome-text h1 {
+  font-size: 2.8rem;
+  color: chocolate;
+  margin-bottom: 1rem;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.welcome-text .button-welcome {
+  padding: 1rem 2.8rem;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  );
+
+  border: 2px solid darkgoldenrod;
+}
+
+.welcome-text .button-welcome:hover,
+.welcome-text .button-welcome:active {
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.footer {
+  background: #606060;
+  height: 12rem;
+  color:white;
+  padding:3rem;
+
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+svg{
+  width:40px;
+  fill:white;
+}
+.three-lines-text{
+  text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 20px;
+    max-height: 100px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.project-title{
+  text-transform: uppercase;
+}
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .footer{
+    padding:1rem;
+    h1{
+      font-size: 1.5rem;
+    }
+  }
+  .footer-content{
+    display: block;
+    line-height: 28px;
+    text-align: center;
+  }
+  .nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+
+    position: absolute;
+    right: 1rem;
+    top: 0.1rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .navbar-link:link,
+  .navbar-link:visited {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .hero-section {
+    width: 100vw;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+  }
+
+  .welcome-text {
+    height: 11.5rem;
+    max-width: 400px;
+    padding: 0.8rem;
+    top: 3.5rem;
+    left: 0.5rem;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .welcome-text button {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.6rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .status {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .image-container{
+    height: 20rem!important;
+  }
+  .nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+
+    position: absolute;
+    right: 1rem;
+    top: 0.1rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .navbar-link:link,
+  .navbar-link:visited {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .hero-section {
+    width: 100vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: relative;
+    width: 1.8rem;
+
+    top: 0.6rem;
+    left: 1rem;
+  }
+
+  .welcome-text {
+    height: 17rem;
+    max-width: 590px;
+    padding: 0.8rem;
+    top: 3.5rem;
+    left: 1rem;
+  }
+
+  .welcome-text h1 {
+    font-size: 1.5rem;
+  }
+  .status {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-link:link,
+  .navbar-link:visited {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    width: 100vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .navbar-link:link,
+  .navbar-link:visited {
+    font-size: 1.5rem;
+  }
+
+  /* .hero-section {
+    width: 100vw;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+  } */
+}
+
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .navbar-link:link,
+  .navbar-link:visited {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  }
+}

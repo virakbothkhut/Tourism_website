@@ -1,0 +1,249 @@
+/***********************/
+/*------- MAIN -------/
+/***********************/
+
+.project-title {
+  font-size: 2.5rem;
+  text-align: center;
+
+  margin: 2.5rem 0;
+}
+
+/***********************/
+/*-- 1. HERO SECTION  --/
+/***********************/
+
+/* main {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+} */
+
+/***********************/
+/*-- 1. IMAGE GALLERY --/
+/***********************/
+
+.gallery h1 {
+  color: #fc9b00;
+}
+
+.gallery p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.top-gallery {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.top-gallery button {
+  border: 2px solid #555;
+  padding: 0.5rem 3.5rem;
+  background: none;
+}
+
+.top-gallery button:hover {
+  cursor: pointer;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.2rem;
+  padding: 1.5rem 3.5rem;
+}
+
+.h-image-container {
+  margin-bottom: 20px;
+  height: 32rem;
+  position: relative;
+}
+
+.h-image-container .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  opacity: 0.9;
+}
+
+.h-image-container .gallery-text {
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  padding: 0.7rem;
+  width: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.gallery-text h3,
+.gallery-text p {
+  color: white;
+}
+
+.evisa {
+  padding: 3.5rem 0;
+  text-align: center;
+  background: #f6b855;
+  svg{
+    fill:red;
+    width: 120px;
+    margin-left:1rem;
+    margin-bottom:1rem;
+  }
+}
+.evisa-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.evisa h3 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.evisa p {
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+/***********************/
+/*-- 1. LOCAL PRODUCT --/
+/***********************/
+
+.local-product-top-gallery {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.local-product-top-gallery h1 {
+  color: #fc9b00;
+}
+
+.local-product-top-gallery p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.button {
+  border: 2px solid #555;
+  padding: 0.5rem 3.5rem;
+  background: none;
+  text-decoration: none;
+  color:#555;
+}
+.button:hover{
+  background: #737373;
+  color:#eee;
+}
+
+.top-gallery .button:hover {
+  cursor: pointer;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.2rem;
+  padding: 1.5rem 3.5rem;
+}
+
+.product-container {
+  margin-bottom: 20px;
+  height: 19rem;
+  position: relative;
+}
+
+.product-container .product-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  padding: 1rem;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  color: white;
+}
+
+.product-gallery .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/***********************/
+/*-- FOOTER --/
+/***********************/
+
+/* .footer {
+  background: #606060;
+  height: 12rem;
+  color:white;
+  padding:3rem;
+
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+svg{
+  width:40px;
+  fill:white;
+} */
+/***********************/
+/*-- MOBILE RESPONSIVE -/
+/***********************/
+
+@media (max-width: 640px) {
+  .image-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.2rem;
+    padding: 1.5rem 0.8rem;
+  }
+
+  .top-gallery h1 {
+    font-size: 1.8rem;
+  }
+
+  .local-product h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .product-container {
+    height: 13rem;
+  }
+
+  .product-container:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+}
